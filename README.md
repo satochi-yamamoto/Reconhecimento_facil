@@ -27,14 +27,14 @@ Antes de começar, certifique-se de ter instalado o Python (versão 3.6 ou super
    - Clone este repositório para o seu computador:
 
      ```bash
-     git clone https://github.com/seu-usuario/nome-do-repositorio.git
+     git clone https://github.com/ydsoftware1979/Reconhecimento_facil.git
      ```
 
 2. **Execute o Script**:
    - Navegue até o diretório do projeto e execute o script Python:
 
      ```bash
-     cd nome-do-repositorio
+     cd Reconhecimento_facil
      python webcam_face_detection.py
      ```
 
