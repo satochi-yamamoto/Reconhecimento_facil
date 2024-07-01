@@ -1,46 +1,60 @@
-Aplicação de Detecção de Rostos com Webcam
-Este projeto é uma aplicação simples em Python para detectar rostos usando a webcam do computador. Ele utiliza a biblioteca OpenCV para capturar o vídeo da webcam e a biblioteca dlib com o modelo Haar Cascade para detectar rostos em tempo real.
+# Webcam Face Detection
 
-Funcionalidades
-Detecta rostos em tempo real usando a webcam do computador.
-Exibe uma mensagem quando um rosto é detectado.
-Conta e exibe o número de rostos detectados em intervalos de tempo configuráveis.
-Permite selecionar o dispositivo de câmera ativa no computador.
-Requisitos de Instalação
-Para executar esta aplicação, você precisa ter instalado:
+Este projeto é uma aplicação simples em Python que utiliza a webcam do computador para detectar rostos e contar quantas pessoas foram identificadas na frente da câmera. Ele usa a biblioteca `OpenCV` para captura de vídeo e detecção de rostos, e `face_recognition` para o reconhecimento e contagem de rostos.
 
-Python (versão 3.6 ou superior)
-OpenCV (pip install opencv-python)
-dlib (pip install dlib) - Requer o CMake instalado no sistema.
-face-recognition (pip install face-recognition)
-Certifique-se de que o CMake esteja instalado antes de instalar o dlib. Se você encontrar problemas durante a instalação do dlib, consulte as instruções de instalação específicas para o seu sistema operacional.
+## Pré-requisitos
 
-Como Usar
-Clone o repositório:
+Antes de começar, certifique-se de ter instalado o Python (versão 3.6 ou superior) e o pip (gerenciador de pacotes do Python) no seu sistema. Além disso, é necessário ter o CMake instalado para compilar o pacote `dlib`, que é uma dependência do `face_recognition`.
 
-bash
-Copiar código
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
-Instale as dependências:
+- Python 3.6 ou superior: [Python Downloads](https://www.python.org/downloads/)
+- pip (instalado automaticamente com o Python)
 
-bash
-Copiar código
-pip install -r requirements.txt
-Certifique-se de que todas as dependências listadas no requirements.txt estão instaladas corretamente.
+## Instalação de Dependências
 
-Execute a aplicação:
+1. **Instalação do CMake**:
+   - O `dlib` requer o CMake para compilar. Certifique-se de ter o CMake instalado no seu sistema. Você pode baixá-lo em [cmake.org](https://cmake.org/download/).
 
-bash
-Copiar código
-python main.py
-Isso iniciará a aplicação de detecção de rostos usando a webcam.
-Pressione q para sair da aplicação.
-Personalize as configurações (opcional):
+2. **Instalação das bibliotecas Python**:
+   - Abra um terminal (ou prompt de comando) e execute o seguinte comando para instalar as bibliotecas necessárias:
 
-Você pode modificar os parâmetros no código-fonte para ajustar a tolerância de detecção de rostos, intervalos de contagem, etc.
-Contribuições
-Contribuições são bem-vindas! Se você quiser melhorar esta aplicação, sinta-se à vontade para enviar pull requests.
+     ```bash
+     pip install opencv-python-headless face-recognition
+     ```
 
-Licença
-Este projeto está licenciado sob a MIT License.
+## Como Usar
+
+1. **Clone o Repositório**:
+   - Clone este repositório para o seu computador:
+
+     ```bash
+     git clone https://github.com/seu-usuario/nome-do-repositorio.git
+     ```
+
+2. **Execute o Script**:
+   - Navegue até o diretório do projeto e execute o script Python:
+
+     ```bash
+     cd nome-do-repositorio
+     python webcam_face_detection.py
+     ```
+
+3. **Funcionamento**:
+   - O script abrirá uma janela mostrando o feed de vídeo da webcam.
+   - Ele detectará rostos na câmera e exibirá uma mensagem "Pessoa Identificada" sempre que um novo rosto for detectado.
+   - A contagem de pessoas identificadas será exibida periodicamente no terminal.
+
+4. **Finalização**:
+   - Para sair do script, pressione `q` na janela do vídeo ou no terminal onde o script está sendo executado.
+
+## Créditos
+
+- **OpenCV**: Biblioteca de visão computacional utilizada para captura de vídeo e detecção de rostos.
+- **face_recognition**: Biblioteca que fornece métodos simples para carregar, manipular e reconhecer faces usando Python e a biblioteca `dlib`.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um issue ou enviar um pull request com melhorias.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
